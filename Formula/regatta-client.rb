@@ -5,50 +5,50 @@
 class RegattaClient < Formula
   desc ""
   homepage "https://github.com/Tantalor93/regatta-client"
-  version "0.2.1"
+  version "0.2.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Tantalor93/regatta-client/releases/download/v0.2.1/regatta-client_Darwin_arm64.tar.gz"
-      sha256 "fbcb35e391ce6ee7832298e88955eaa9a51563a08d77f992cf2dcff62450f7d9"
+      url "https://github.com/Tantalor93/regatta-client/releases/download/v0.2.2/regatta-client_Darwin_arm64.tar.gz"
+      sha256 "f3c40a7b17cba5a8f0334f094d8710988c4c3e3e8470ab6b32e0b570c984c279"
 
       def install
         bin.install "regatta-client"
-        bash_completion.install "completions/regatta-client.bash" => "regatta-client"
-        zsh_completion.install "completions/regatta-client.zsh" => "regatta-client"
+        bash_completion.install "completions/regatta-client.bash" => "_regatta-client"
+        zsh_completion.install "completions/regatta-client.zsh" => "_regatta-client"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Tantalor93/regatta-client/releases/download/v0.2.1/regatta-client_Darwin_x86_64.tar.gz"
-      sha256 "f87f522b8d54d97b27c5e018172d8e4e5a89747883b2096dfbae2d8dffb9fe4a"
+      url "https://github.com/Tantalor93/regatta-client/releases/download/v0.2.2/regatta-client_Darwin_x86_64.tar.gz"
+      sha256 "722a7eb4e44a3edc7559501c404725e7f84b456ce42cd48aec94294e3c0840e5"
 
       def install
         bin.install "regatta-client"
-        bash_completion.install "completions/regatta-client.bash" => "regatta-client"
-        zsh_completion.install "completions/regatta-client.zsh" => "regatta-client"
+        bash_completion.install "completions/regatta-client.bash" => "_regatta-client"
+        zsh_completion.install "completions/regatta-client.zsh" => "_regatta-client"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Tantalor93/regatta-client/releases/download/v0.2.1/regatta-client_Linux_arm64.tar.gz"
-      sha256 "5bbd1ea74bd0b326a8c1af1b37338730aa2bbece72c49f6a3b5b7089b6366d8d"
+      url "https://github.com/Tantalor93/regatta-client/releases/download/v0.2.2/regatta-client_Linux_arm64.tar.gz"
+      sha256 "fecc288c7ddc342944e7f6300934dc471415c55ba0c38c1598e8d8eebc0cc639"
 
       def install
         bin.install "regatta-client"
-        bash_completion.install "completions/regatta-client.bash" => "regatta-client"
-        zsh_completion.install "completions/regatta-client.zsh" => "regatta-client"
+        bash_completion.install "completions/regatta-client.bash" => "_regatta-client"
+        zsh_completion.install "completions/regatta-client.zsh" => "_regatta-client"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Tantalor93/regatta-client/releases/download/v0.2.1/regatta-client_Linux_x86_64.tar.gz"
-      sha256 "829f35f90a7879d687c2c9f76cbef76d7a6cd53e805e53226b194fbd077380d4"
+      url "https://github.com/Tantalor93/regatta-client/releases/download/v0.2.2/regatta-client_Linux_x86_64.tar.gz"
+      sha256 "dae58d7be844d1df39fdcb5af149308ffa3bc61bd7fd358afa9ebaec40970bbc"
 
       def install
         bin.install "regatta-client"
-        bash_completion.install "completions/regatta-client.bash" => "regatta-client"
-        zsh_completion.install "completions/regatta-client.zsh" => "regatta-client"
+        bash_completion.install "completions/regatta-client.bash" => "_regatta-client"
+        zsh_completion.install "completions/regatta-client.zsh" => "_regatta-client"
       end
     end
   end
