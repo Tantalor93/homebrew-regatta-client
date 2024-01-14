@@ -5,12 +5,12 @@
 class RegattaClient < Formula
   desc ""
   homepage "https://github.com/Tantalor93/regatta-client"
-  version "0.7.2"
+  version "0.7.3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Tantalor93/regatta-client/releases/download/v0.7.2/regatta-client_darwin_amd64.tar.gz"
-      sha256 "b93d1e7be5e807b47f34f027ed39668222038928b6cc580356f26ef23b66cb53"
+    if Hardware::CPU.arm?
+      url "https://github.com/Tantalor93/regatta-client/releases/download/v0.7.3/regatta-client_darwin_arm64.tar.gz"
+      sha256 "1588356cbdfc7fd326a63683a1aebe08cb91f405e6d228a39995c25ccfda5b3f"
 
       def install
         bin.install "regatta-client"
@@ -19,9 +19,9 @@ class RegattaClient < Formula
         man1.install Dir["manpages/*.1"]
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Tantalor93/regatta-client/releases/download/v0.7.2/regatta-client_darwin_arm64.tar.gz"
-      sha256 "2dce57f1ebaa721179979d18b20ff01281fbd258912d978603895307aa8d2b95"
+    if Hardware::CPU.intel?
+      url "https://github.com/Tantalor93/regatta-client/releases/download/v0.7.3/regatta-client_darwin_amd64.tar.gz"
+      sha256 "9529601fbd85a0764cf80187970845b4d3012072671a4096fe8d809356606c02"
 
       def install
         bin.install "regatta-client"
@@ -34,8 +34,8 @@ class RegattaClient < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Tantalor93/regatta-client/releases/download/v0.7.2/regatta-client_linux_arm64.tar.gz"
-      sha256 "eb0b77e24c4db6a97cca59f2ac97a443390d04f28b7789a0423f213dc11e9e22"
+      url "https://github.com/Tantalor93/regatta-client/releases/download/v0.7.3/regatta-client_linux_arm64.tar.gz"
+      sha256 "9817e41d125e5289dbf747ab71bd88f49f139bb9ab73bebff2793ab7ddba9863"
 
       def install
         bin.install "regatta-client"
@@ -45,8 +45,8 @@ class RegattaClient < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Tantalor93/regatta-client/releases/download/v0.7.2/regatta-client_linux_amd64.tar.gz"
-      sha256 "9a7bc9cdbb88ab9a7bdac5b6b326b5a15407ecace6ac4c0479a8df25247b1864"
+      url "https://github.com/Tantalor93/regatta-client/releases/download/v0.7.3/regatta-client_linux_amd64.tar.gz"
+      sha256 "45cf94beffe8b1ff5c31502124d8d06456c817bf623064d041c6a2adaf9eed89"
 
       def install
         bin.install "regatta-client"
